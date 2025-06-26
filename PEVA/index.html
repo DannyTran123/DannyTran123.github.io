@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Whole-Body-Conditioned Ego-Centric Video Prediction</title>
+  <title>Whole-Body Conditioned Egocentric Video Prediction</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -56,26 +56,34 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://yutongbai.com/" target="_blank">Yutong Bai<sup>1</sup></a>,</span>
+                <a href="https://yutongbai.com/" target="_blank">Yutong Bai<sup>1,*</sup></a>,</span>
                 <span class="author-block">
-                  <a href="https://dannytran123.github.io/" target="_blank">Danny Tran<sup>1</sup></a>,</span>
+                  <a href="https://dannytran123.github.io/" target="_blank">Danny Tran<sup>1,*</sup></a>,</span>
                   <span class="author-block">
-                    <a href="https://www.amirbar.net/" target="_blank">Amir Bar<sup>2</sup></a>
+                    <a href="https://www.amirbar.net/" target="_blank">Amir Bar<sup>2,*</sup></a>,
                   </span>
                   <span class="author-block">
-                    <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell<sup>1</sup></a>
+                    <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell<sup>1,&dagger;</sup></a>,
                   </span>
                   <span class="author-block">
-                    <a href="http://yann.lecun.com/" target="_blank">Yann LeCun<sup>2</sup></a>
+                    <a href="http://yann.lecun.com/" target="_blank">Yann LeCun<sup>2,&dagger;</sup></a>,
                   </span>
                   <span class="author-block">
-                    <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank">Jitendra Malik<sup>1</sup></a>
+                    <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank">Jitendra Malik<sup>1,&dagger;</sup></a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>UC Berkeley (BAIR), </span>
-                    <span class="author-block"><sup>2</sup>FAIR at Meta</span>
+                    <span class="author-block">
+                      <img src="static/images/BAIR_logo.png" alt="Berkeley logo" style="height: 3em; vertical-align: middle; margin-right: 0.3em;">
+                      <sup>1</sup>
+                      UC Berkeley (BAIR), 
+                    </span>
+                    <span class="author-block">
+                      <img src="static/images/Meta_logo.png" alt="Berkeley logo" style="height: 2.4em; vertical-align: middle; margin-left: 0.4em; margin-right: 0.3em;">
+                      <sup>2</sup>
+                      FAIR at Meta
+                    </span>
                     <!-- <span class="author-block">Institution Name<br>In Submission</span> -->
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
@@ -155,6 +163,51 @@
 </section>
 <!-- End teaser video -->
 
+
+<!-- What do we want?-->
+<style>
+  .gradient-text {
+    font-weight: bold;
+    background: linear-gradient(to right, #00cfff, #a154f6, #ff22d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Firefox */
+    color: transparent;
+    display: inline-block;       /* ensures bounding box fits */
+    overflow: hidden;            /* hides gradient overflow */
+    font-size: 3rem;
+    line-height: 1.2;
+    padding-bottom: 0.25em;
+  }
+</style>
+
+<style>
+  .gradient-text-reg {
+    font-weight: bold;
+    background: linear-gradient(to right, #00cfff, #a154f6, #ff22d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+</style>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">What do we want?</h2>
+
+    <!-- Centered gradient title -->
+    <div class="section">
+      <div class="container has-text-centered">
+        <h2 class="title is-1 gradient-text mb-6">
+          A World Model for Embodied Agents
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- What do we want?-->
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -173,6 +226,68 @@
 <!-- End paper abstract -->
 
 
+<!-- What are the requirements? -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="margin-bottom: 2rem;">What are the requirements?</h2>
+
+    <div class="box">
+      <h2 class="subtitle has-text-left" style="margin-bottom: 1.5rem;">
+        To create a <span class="gradient-text-reg">World Model for Embodied Agents</span>, we need...
+      </h2>
+
+      <h2 class="subtitle has-text-left" style="margin-bottom: 0.5rem;">
+        … a real embodied agent…: complex actions.
+      </h2>
+      <ul class="subtitle has-text-left" style="list-style: none; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li>❌ abstract control signals — ⬆️，⬇️，⬅️，➡️</li>
+        <li>✅ real, physical grounded complex action space</li>
+      </ul>
+
+      <h2 class="subtitle has-text-left" style="margin-bottom: 0.5rem;">
+        … that act in the real world: complex scenarios.
+      </h2>
+      <ul class="subtitle has-text-left" style="list-style: none; padding-left: 1.5rem;">
+        <li>❌ Ascetic scene, stationary camera</li>
+        <li>✅ diverse real-life scenario, ego-centric view</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- End: What are the requirements? -->
+
+
+<!-- Humans as Agents -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="margin-bottom: 2rem;">Humans as Agents</h2>
+
+    <div class="box">
+      <h2 class="subtitle has-text-left" style="margin-bottom: 1.5rem;">
+        To create a <span class="gradient-text-reg">World Model for Embodied Agents</span>, we need...
+      </h2>
+
+      <h2 class="subtitle has-text-left" style="margin-bottom: 0.5rem;">
+        … a real embodied agent…: complex actions.
+      </h2>
+      <ul class="subtitle has-text-left" style="list-style: none; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li>❌ abstract control signals — ⬆️，⬇️，⬅️，➡️</li>
+        <li>✅ real, physical grounded complex action space</li>
+      </ul>
+
+      <h2 class="subtitle has-text-left" style="margin-bottom: 0.5rem;">
+        … that act in the real world: complex scenarios.
+      </h2>
+      <ul class="subtitle has-text-left" style="list-style: none; padding-left: 1.5rem;">
+        <li>❌ Ascetic scene, stationary camera</li>
+        <li>✅ diverse real-life scenario, ego-centric view</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- Humans as Agents -->
+
+
 <!-- What did we do?-->
 <section class="section">
   <div class="container is-max-desktop">
@@ -186,21 +301,6 @@
   </div>
 </section>
 <!-- What did we do?-->
-
-
-<!-- What can it do?-->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">What can it do?</h2>
-    <!-- <div class="hero-body"> -->
-      <img src="static/images/PEVA_what_can_it_do.png" alt="MY ALT TEXT" style="margin-bottom: 1rem;"/>
-        <h2 class="subtitle has-text-centered">
-          PEVA enables Full-Body-Controlled World Models by rolling out possible futures in ego-centric view. This enables Full-Body Planning by rolling out possible futures and determining which future leads closest to the goal such as in a model predictive control framework. 
-        </h2>
-    </div>
-  </div>
-</section>
-<!-- What can it do?-->
 
 
 <!-- Motivation -->
@@ -236,53 +336,40 @@
 </section>
 <!-- Motivation-->
 
-
-<!-- Method-->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Method</h2>
-    <!-- <div class="hero-body"> -->
-      <img src="static/images/method.png" alt="MY ALT TEXT" style="margin-bottom: 1rem;"/>
-        <h2 class="subtitle has-text-left">
-          <strong>Random Timeskips:</strong> It allows the model to learn both short-term motion dynamics and longer-term activity patterns.
-        </h2>
-        <h2 class="subtitle has-text-left">
-          <strong>Sequence-Level Training:</strong> Model the entire sequence of motion by applying the loss over each prefix of frames.
-        </h2>
-        <h2 class="subtitle has-text-left">
-          <strong>Action Embeddings:</strong> Whole-body motion is high-dimensional, concatenate all actions at time <i>t</i> into a 1D tensor and use it to condition each AdaLN layer.
-        </h2>
-    </div>
-  </div>
-</section>
-<!-- Method-->
-
-<!-- Atomic Actions-->
+<!-- Following Atomic Actions-->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Following Atomic Actions</h2>
-    <h2 class="subtitle has-text-left">
-      We demonstrate samples of PEVA following 
+    <h2 class="subtitle has-text-left" style="margin-bottom: 3rem;">
+      We demonstrate samples of PEVA following atomic actions.
     </h2>
-    <div class="hero-body">
-      <img src="static/images/atomic_actions_v2/move_forward.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/rotate_left.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/rotate_right.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/move_left_hand_up.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/move_left_hand_down.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/move_left_hand_left.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/move_left_hand_right.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/move_right_hand_up.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/move_right_hand_down.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/move_right_hand_left.png" alt="MY ALT TEXT"/>
-      <img src="static/images/atomic_actions_v2/move_right_hand_right.png" alt="MY ALT TEXT"/>
-        <!-- <h2 class="subtitle has-text-centered">
-
-        </h2> -->
+    <!-- <div class="hero-body"> -->
+      <h3 class="title is-4">Move Forward</h3>
+      <img src="static/images/atomic_actions_v3/move_forward.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Rotate Left</h3>
+      <img src="static/images/atomic_actions_v3/rotate_left.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Rotate Right</h3>
+      <img src="static/images/atomic_actions_v3/rotate_right.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Move Left Hand Up</h3>
+      <img src="static/images/atomic_actions_v3/move_left_hand_up.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Move Left Hand Down</h3>
+      <img src="static/images/atomic_actions_v3/move_left_hand_down.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Move Left Hand Left</h3>
+      <img src="static/images/atomic_actions_v3/move_left_hand_left.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Move Left Hand Right</h3>
+      <img src="static/images/atomic_actions_v3/move_left_hand_right.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Move Right Hand Up</h3>
+      <img src="static/images/atomic_actions_v3/move_right_hand_up.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Move Right Hand Down</h3>
+      <img src="static/images/atomic_actions_v3/move_right_hand_down.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Move Right Hand Left</h3>
+      <img src="static/images/atomic_actions_v3/move_right_hand_left.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
+      <h3 class="title is-4">Move Right Hand Right</h3>
+      <img src="static/images/atomic_actions_v3/move_right_hand_right.png" alt="MY ALT TEXT" style="margin-bottom: 2rem;"/>
     </div>
   </div>
 </section>
-<!-- Atomic Actions-->
+<!-- Following Atomic Actions-->
 
 
 <!-- Long Video Generation-->
@@ -302,132 +389,178 @@
 </section>
 <!-- Long Video Generation-->
 
-
-<!-- Rollout Images -->
 <style>
-  #results-carousel {
-    max-width: 900px;
-    margin: 0 auto;
+  .gallery-wrapper {
+    display: inline-block; /* shrink to fit contents */
+    text-align: center;
   }
+  
+  .main-image {
+    display: block;
+    width: 100%;       /* Match thumbnail row width */
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .thumbnail-row {
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* 2 fixed rows */
+    grid-auto-flow: column;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .thumbnail-row img {
+    width: 100px;
+    border: 3px solid transparent;       /* Light gray border for all thumbnails */
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;       /* Ensure border doesn't affect layout */
+    transition: border-color 0.2s ease;
+  }
+  
+  .thumbnail-row img.active {
+    border-color: #2270be;
+  }
+
+  .thumb-wrapper {
+    display: inline-block;
+    padding: 0px;                  /* creates space between img and border */
+    border: 1px solid #bababa;
+    border-radius: 10px;           /* match image radius + padding */
+    box-sizing: border-box;
+  }
+  
+  .thumb-wrapper img {
+    width: 100px;
+    display: block;
+    border-radius: 10px;           /* inner radius for the image */
+  }
+  
 </style>
-<section class="hero is-small">
-  <div class="hero-body">
-    <h2 class="title is-3">More Long Rollouts</h2>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/supp_long/id_19.png" alt="MY ALT TEXT"/>
+
+<!-- Long Sequence More -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">More Long Video Generation</h2>
+    <img id="mainDisplay1" src="static/images/supp_long/id_19.png" class="main-image" alt="Main Display" />
+
+    <!-- Thumbnails -->
+    <div class="thumbnail-row">
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_19.png" data-full="static/images/supp_long/id_19.png" class="thumb active" alt="Thumb 107" onclick="changeImage(this, 'mainDisplay1')">
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/supp_long/id_22.png" alt="MY ALT TEXT"/>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_22.png" data-full="static/images/supp_long/id_22.png" class="thumb" alt="Thumb 104" onclick="changeImage(this, 'mainDisplay1')">
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/supp_long/id_34.png" alt="MY ALT TEXT"/>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_34.png" data-full="static/images/supp_long/id_34.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
       </div>
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/supp_long/id_40.png" alt="MY ALT TEXT"/>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_40.png" data-full="static/images/supp_long/id_40.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/supp_long/id_41.png" alt="MY ALT TEXT"/>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_41.png" data-full="static/images/supp_long/id_41.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/supp_long/id_44.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_47.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_53.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_58.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_65.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_66.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_67.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_75.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_83.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_84.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_86.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_87.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_88.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_89.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_90.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_91.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_92.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_94.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_104.png" alt="MY ALT TEXT"/>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/supp_long/id_107.png" alt="MY ALT TEXT"/>
-     </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_44.png" data-full="static/images/supp_long/id_44.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_47.png" data-full="static/images/supp_long/id_47.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_53.png" data-full="static/images/supp_long/id_53.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_58.png" data-full="static/images/supp_long/id_58.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_65.png" data-full="static/images/supp_long/id_65.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_67.png" data-full="static/images/supp_long/id_67.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_75.png" data-full="static/images/supp_long/id_75.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_83.png" data-full="static/images/supp_long/id_83.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_84.png" data-full="static/images/supp_long/id_84.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_86.png" data-full="static/images/supp_long/id_86.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_87.png" data-full="static/images/supp_long/id_87.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_88.png" data-full="static/images/supp_long/id_88.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_89.png" data-full="static/images/supp_long/id_89.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_90.png" data-full="static/images/supp_long/id_90.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_91.png" data-full="static/images/supp_long/id_91.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_92.png" data-full="static/images/supp_long/id_92.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_94.png" data-full="static/images/supp_long/id_94.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_104.png" data-full="static/images/supp_long/id_104.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/supp_long_thumb/id_107.png" data-full="static/images/supp_long/id_107.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay1')">
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
-<!-- Rollout Images -->
+
+<!-- <script>
+  function changeImage(element) {
+    const fullImage = element.getAttribute('data-full');
+    if (fullImage) {
+      document.getElementById("mainDisplay").src = fullImage;
+    }
+
+    document.querySelectorAll('.thumb').forEach(el => el.classList.remove('active'));
+    element.classList.add('active');
+  }
+</script> -->
+
+<script>
+  function changeImage(element, targetId) {
+    const main = document.getElementById(targetId);
+    if (main && element.dataset.full) {
+      main.src = element.dataset.full;
+    }
+
+    // Remove active class from siblings within the same row
+    const wrappers = element.closest('.thumbnail-row').querySelectorAll('.thumb-wrapper');
+    wrappers.forEach(w => {
+      w.classList.remove('active');
+      w.querySelector('img').classList.remove('active');
+    });
+
+    element.classList.add('active');
+    element.parentElement.classList.add('active');
+  }
+</script>
 
 
-<!-- Planning with Counterfactuals-->
+<!-- Planning with Multiple Action Candidates-->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Planning with Multiple Action Candidates</h2>
     <h2 class="subtitle has-text-left">
-      We explore PEVA's ability to serve as a world model by demonstrating a planning example by simulating multiple action candidates using PEVA and scoring them based on their perceptual similarity to the goal, as measured by LPIPS (Zhang et al., 2018).
+      We explore PEVA's ability to serve as a world model by demonstrating a planning example by simulating multiple action candidates using PEVA and scoring them based on their perceptual similarity to the goal, as measured by LPIPS. Hover over the video to play.
     </h2>
       <video class="hover-video" height="100%" muted>
         <source src="static/videos/counterfactuals_gif_1.mp4" type="video/mp4">
@@ -444,10 +577,40 @@
     </div>
   </div>
 </section>
-<!-- Planning with Counterfactuals-->
+<!-- Planning with Multiple Action Candidates-->
 
 
-<!-- Limitations -->
+<!-- More Attempts with Planning-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">More Attempts with Planning</h2>
+    <img id="mainDisplay2" src="static/images/PEVA_CEM_viz/right_id_18.png" class="main-image" alt="Main Display" />
+
+    <!-- Thumbnails -->
+    <div class="thumbnail-row">
+      <div class="thumb-wrapper active">
+        <img src="static/images/PEVA_CEM_viz/right_id_18_thumb.png" data-full="static/images/PEVA_CEM_viz/right_id_18.png" class="thumb active" alt="Thumb 107" onclick="changeImage(this, 'mainDisplay2')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/PEVA_CEM_viz/right_id_36_thumb.png" data-full="static/images/PEVA_CEM_viz/right_id_36.png" class="thumb" alt="Thumb 104" onclick="changeImage(this, 'mainDisplay2')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/PEVA_CEM_viz/right_kettle_thumb.png" data-full="static/images/PEVA_CEM_viz/right_kettle.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/PEVA_CEM_viz/left_id_4_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_4.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/PEVA_CEM_viz/left_id_10_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_10.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2')">
+      </div>
+      <div class="thumb-wrapper active">
+        <img src="static/images/PEVA_CEM_viz/left_id_15_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_15.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2')">
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <style>
   #results-carousel {
     max-width: 900px;
@@ -457,7 +620,7 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <h2 class="title is-3">Limitations</h2>
+    <h2 class="title is-3">More Attempts with Planning</h2>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
       <div class="item">
@@ -506,7 +669,27 @@
 </div>
 </div>
 </section>
-<!-- Limitations -->
+<!-- More Attempts with Planning-->
+
+
+<!-- Method-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Method</h2>
+    <!-- <div class="hero-body"> -->
+      <img src="static/images/method.png" alt="MY ALT TEXT" style="margin-bottom: 1rem;"/>
+        <h2 class="subtitle has-text-left">
+          <strong>Random Timeskips:</strong> It allows the model to learn both short-term motion dynamics and longer-term activity patterns.
+        </h2>
+        <h2 class="subtitle has-text-left">
+          <strong>Sequence-Level Training:</strong> Model the entire sequence of motion by applying the loss over each prefix of frames.
+        </h2>
+        <h2 class="subtitle has-text-left">
+          <strong>Action Embeddings:</strong> Whole-body motion is high-dimensional, concatenate all actions at time <i>t</i> into a 1D tensor and use it to condition each AdaLN layer.
+        </h2>
+    </div>
+  </div>
+</section>
 
 
 <!-- Quantitative Results-->
@@ -552,6 +735,17 @@
 </section>
 <!--End BibTex citation -->
 
+<!-- Acknowledgements-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="margin-bottom: 3rem;">Acknowledgements</h2>
+    <h2 class="subtitle has-text-left">
+      The authors thank Rithwik Nukala for his help in annotating atomic actions. We thank Katerina Fragkiadaki, Philipp Krähenbühl, Bharath Hariharan, Guanya Shi, Shubham Tsunami and Deva Ramanan for the useful suggestions and feedbacks for improving the paper; Jianbo Shi for the discussion regarding control theory; Yilun Du for the support on Diffusion Forcing; Brent Yi for his help in human motion related works and Alexei Efros for the discussion and debates regarding world models. This work is partially supported by the ONR MURI N00014-21-1-2801.
+    </h2>
+  </div>
+</section>
+<!-- Acknowledgements-->
+
 
   <footer class="footer">
   <div class="container">
@@ -576,6 +770,37 @@
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel/dist/css/bulma-carousel.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel/dist/js/bulma-carousel.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousels = bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: false,
+    });
+
+    const carousel = carousels[0];
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    if (carousel) {
+      thumbnails.forEach((thumb, idx) => {
+        thumb.addEventListener('click', () => {
+          carousel.to(idx); // Use `.to()` instead of `slideTo()`
+          thumbnails.forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+        });
+      });
+
+      carousel.on('before:show', (state) => {
+        thumbnails.forEach(t => t.classList.remove('active'));
+        const activeThumb = thumbnails[state.index];
+        if (activeThumb) activeThumb.classList.add('active');
+      });
+    }
+  });
+</script>
 
   </body>
   </html>
