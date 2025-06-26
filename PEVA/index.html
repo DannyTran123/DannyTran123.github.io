@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Whole-Body-Conditioned Ego-Centric Video Prediction</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Whole-Body-Conditioned Ego-Centric Video Prediction</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://yutongbai.com/" target="_blank">Yutong Bai<sup>1</sup></a>,</span>
+                <span class="author-block">
+                  <a href="https://dannytran123.github.io/" target="_blank">Danny Tran<sup>1</sup></a>,</span>
+                  <span class="author-block">
+                    <a href="https://www.amirbar.net/" target="_blank">Amir Bar<sup>2</sup></a>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell<sup>1</sup></a>
+                  </span>
+                  <span class="author-block">
+                    <a href="http://yann.lecun.com/" target="_blank">Yann LeCun<sup>2</sup></a>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank">Jitendra Malik<sup>1</sup></a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>UC Berkeley (BAIR), </span>
+                    <span class="author-block"><sup>2</sup>FAIR at Meta</span>
+                    <!-- <span class="author-block">Institution Name<br>In Submission</span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="is-size-5 has-text-centered">
+                    <span class="publication-cvpr"><strong>Technical Report</strong></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We train models to <b>P</b>redict <b>E</b>go-centric <b>V</b>ideo from human <b>A</b>ctions (PEVA), given the past video and an action represented by the relative 3D body pose. By conditioning on kinematic pose trajectories, structured by the joint hierarchy of the body, our model learns to simulate how physical human actions shape the environment from a first-person point of view. We train an auto-regressive conditional diffusion transformer on Nymeria, a large-scale dataset of real-world egocentric video and body pose capture. We further design a hierarchical evaluation protocol with increasingly challenging tasks, enabling a comprehensive analysis of the model's embodied prediction and control abilities. Our work represents an initial attempt to tackle the challenges of modeling complex real-world environments and embodied agent behaviors with video prediction from the perspective of a human.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- What did we do?-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">What did we do?</h2>
+    <!-- <div class="hero-body"> -->
+      <img src="static/images/what_did_we_do.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          We trained model (PEVA) on Nymeria Dataset, for Whole-Body-Conditioned Egocentric Prediction.
+        </h2>
+    </div>
+  </div>
+</section>
+<!-- What did we do?-->
+
+
+<!-- What can it do?-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">What can it do?</h2>
+    <!-- <div class="hero-body"> -->
+      <img src="static/images/PEVA_what_can_it_do.png" alt="MY ALT TEXT" style="margin-bottom: 1rem;"/>
+        <h2 class="subtitle has-text-centered">
+          PEVA enables Full-Body-Controlled World Models by rolling out possible futures in ego-centric view. This enables Full-Body Planning by rolling out possible futures and determining which future leads closest to the goal such as in a model predictive control framework. 
+        </h2>
+    </div>
+  </div>
+</section>
+<!-- What can it do?-->
+
+
+<!-- Motivation -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Motivation: Visual System for Planning</h2>
+    <h2 class="subtitle has-text-left">
+      Humans routinely look first and act second—our eyes lock onto a goal, the brain runs a brief visual “simulation” of the outcome, and only then does the body move.
+    </h2>
+    <h2 class="subtitle has-text-left">
+      At every moment, our egocentric view both serves as input from the environment and <span style="color: red;">reflects the intention/goal</span> behind the next movement.
+    </h2>
+    <!-- <div class="hero-body"> -->
+    <img src="static/images/motivation.png" alt="MY ALT TEXT"/>
+    
+    <h2 class="title is-4">Challenges</h2>
+      <ul class="subtitle" style="list-style-type: disc; padding-left: 1.5rem;">
+        <li>Conditioning from actions to vision is nonlinear: Same movement leads to different views because humans act in complex, embodied, goal-directed environments.</li>
+        <li>Human Control Is High-Dimensional and Structured: Full-body motion spans 48+ DoF, with hierarchical, time-dependent dynamics—not synthetic control codes.</li>
+        <li>Egocentric View Reveals Intention—But Hides the Body: First-person vision reflects goals, but not motion execution—models must infer consequences from invisible physical actions.</li>
+        <li>Perception Lags Behind Action: Visual feedback often comes seconds later, requiring long-horizon prediction and temporal reasoning.</li>
+      </ul>
+    <h2 class="title is-4">Why it matters?</h2>
+      <ul class="subtitle" style="list-style-type: disc; padding-left: 1.5rem;">
+        <li>Vision as Goal: Humans act to see, thus egocentric prediction is internal goal simulation. </li>
+        <li>Action–Perception Coupling: The world we perceive depends on how we move our whole body. </li>
+        <li>Moving Beyond Synthetic Actions: Prior world models use abstract control signals while ours models real, physical human action. </li>
+        <li>Toward Embodied Intelligence: Physically grounded video models bring us closer to agents that plan, adapt, and interact like humans. </li>
+        <li>Intention Understanding Through Prediction: Predicting what an agent will see is a path to inferring what it wants </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- Motivation-->
+
+
+<!-- Method-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Method</h2>
+    <!-- <div class="hero-body"> -->
+      <img src="static/images/method.png" alt="MY ALT TEXT" style="margin-bottom: 1rem;"/>
+        <h2 class="subtitle has-text-left">
+          <strong>Random Timeskips:</strong> It allows the model to learn both short-term motion dynamics and longer-term activity patterns.
+        </h2>
+        <h2 class="subtitle has-text-left">
+          <strong>Sequence-Level Training:</strong> Model the entire sequence of motion by applying the loss over each prefix of frames.
+        </h2>
+        <h2 class="subtitle has-text-left">
+          <strong>Action Embeddings:</strong> Whole-body motion is high-dimensional, concatenate all actions at time <i>t</i> into a 1D tensor and use it to condition each AdaLN layer.
+        </h2>
+    </div>
+  </div>
+</section>
+<!-- Method-->
+
+<!-- Atomic Actions-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Following Atomic Actions</h2>
+    <h2 class="subtitle has-text-left">
+      We demonstrate samples of PEVA following 
+    </h2>
+    <div class="hero-body">
+      <img src="static/images/atomic_actions_v2/move_forward.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/rotate_left.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/rotate_right.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/move_left_hand_up.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/move_left_hand_down.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/move_left_hand_left.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/move_left_hand_right.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/move_right_hand_up.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/move_right_hand_down.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/move_right_hand_left.png" alt="MY ALT TEXT"/>
+      <img src="static/images/atomic_actions_v2/move_right_hand_right.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+
+        </h2> -->
+    </div>
+  </div>
+</section>
+<!-- Atomic Actions-->
+
+
+<!-- Long Video Generation-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Long Video Generation</h2>
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/long_seq_v2.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Generation Over Long-Horizons, including 16-second video generation examples. PEVA generates coherent 16-second rollouts conditioned on whole-body motion.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- Long Video Generation-->
+
+
+<!-- Rollout Images -->
+<style>
+  #results-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+</style>
+<section class="hero is-small">
+  <div class="hero-body">
+    <h2 class="title is-3">More Long Rollouts</h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supp_long/id_19.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supp_long/id_22.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supp_long/id_34.png" alt="MY ALT TEXT"/>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supp_long/id_40.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supp_long/id_41.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supp_long/id_44.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_47.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_53.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_58.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_65.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_66.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_67.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_75.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_83.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_84.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_86.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_87.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_88.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_89.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_90.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_91.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_92.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_94.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_104.png" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/supp_long/id_107.png" alt="MY ALT TEXT"/>
+     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Rollout Images -->
+
+
+<!-- Planning with Counterfactuals-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Planning with Multiple Action Candidates</h2>
+    <h2 class="subtitle has-text-left">
+      We explore PEVA's ability to serve as a world model by demonstrating a planning example by simulating multiple action candidates using PEVA and scoring them based on their perceptual similarity to the goal, as measured by LPIPS (Zhang et al., 2018).
+    </h2>
+      <video class="hover-video" height="100%" muted>
+        <source src="static/videos/counterfactuals_gif_1.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        PEVA enables us to rule out action sequences that leads us to the sink in the top row, and outdoors in the second row. PEVA allows us to find a reasonable sequence of actions to open the refridgerator in the third row.
+      </h2>
+      <video class="hover-video" height="100%" muted>
+        <source src="static/videos/counterfactuals_gif_2.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        PEVA enables us to rule out action sequences that leads us to the plants in the top row, and to the kitchen in the second row. PEVA allows us to find a reasonable sequence of actions to grab the box in the second row.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- Planning with Counterfactuals-->
+
+
+<!-- Limitations -->
+<style>
+  #results-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+</style>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <h2 class="title is-3">Limitations</h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/PEVA_CEM_viz/right_id_18.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          In this case, we are able to predict a sequence of actions that raises the right arm to the mixing stick. We see a limitation with our method as we only predict the right arm so we do not predict to move the left arm down accordingly.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/PEVA_CEM_viz/right_id_36.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          In this case, we are able to predict a sequence of actions that moves our right arm toward the left but not quite enough. We see a limitation with our method as we only predict the right arm so we do not predict any necessary additional body rotations.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/PEVA_CEM_viz/right_kettle.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          In this case, we are able to predict a sequence of actions that reaches toward the kettle but does not quite grab it as in the goal.
+        </h2>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/PEVA_CEM_viz/left_id_4.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          In this case, we are able to predict a sequence of actions that pulls the left arm in, similar to the goal.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/PEVA_CEM_viz/left_id_10.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          In this case, we are able to predict a sequence of actions that lowers the left arm, but not the same amount as the groundtruth sequence as we can see in the pose and hand at the bottom of our rollout.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/PEVA_CEM_viz/left_id_15.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         In this case, we are able to predict a sequence of actions that lowers the left arm that lowers the tissue. However, the goal image still has the tissue visible.
+       </h2>
+     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Limitations -->
+
+
+<!-- Quantitative Results-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Quantitative Results</h2>
+
+      <h3 class="title is-4 has-text-left">Atomic Action Performance</h3>
+      <img src="static/images/atomic_action_quantitative.png" alt="MY ALT TEXT"/>
+        <h3 class="subtitle has-text-centered" style="margin-bottom: 4rem;">
+          Comparison of models in generating videos of atomic actions.
+        </h3>
+      
+      <h3 class="title is-4 has-text-left">Baselines</h3>
+      <img src="static/images/baselines.png" alt="MY ALT TEXT" style="width: 60%;  display: block; margin: 0 auto;"/>
+        <h3 class="subtitle has-text-centered" style="margin-bottom: 4rem;">
+          Baseline Perceptual Metrics.
+        </h3>
+
+      <h3 class="title is-4 has-text-left">Video Quality</h3>
+        <img src="static/images/fid_comparison.png" alt="MY ALT TEXT" style="width: 80%;  display: block; margin: 0 auto;"/>
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 4rem;">
+            Video Quality Across Time (FID).
+          </h3>
+
+      <h3 class="title is-4 has-text-left">Scaling</h3>
+        <img src="static/images/scaling.png" alt="MY ALT TEXT"/>
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 4rem;">
+            PEVA has good scaling ability. Larger models lead to better performance.
+          </h3>
+    </div>
+  </div>
+</section>
+<!-- Quantitative Results-->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
+
+  <script>
+    document.querySelectorAll('.hover-video').forEach(video => {
+      video.addEventListener('mouseenter', () => {
+        video.play();
+      });
+      video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0; // Optional: reset to start
+      });
+    });
+  </script>
