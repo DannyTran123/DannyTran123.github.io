@@ -52,35 +52,41 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Whole-Body-Conditioned Ego-Centric Video Prediction</h1>
+            <h1 class="title is-1 publication-title">Whole-Body Conditioned Egocentric Video Prediction</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://yutongbai.com/" target="_blank">Yutong Bai<sup>1,*</sup></a>,</span>
+              <div class="authors-line">
                 <span class="author-block">
-                  <a href="https://dannytran123.github.io/" target="_blank">Danny Tran<sup>1,*</sup></a>,</span>
-                  <span class="author-block">
-                    <a href="https://www.amirbar.net/" target="_blank">Amir Bar<sup>2,*</sup></a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell<sup>1,&dagger;</sup></a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="http://yann.lecun.com/" target="_blank">Yann LeCun<sup>2,&dagger;</sup></a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank">Jitendra Malik<sup>1,&dagger;</sup></a>
-                  </span>
-                  </div>
+                  <a href="https://yutongbai.com/" target="_blank">Yutong Bai<sup>1,*</sup></a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://dannytran123.github.io/" target="_blank">Danny Tran<sup>1,*</sup></a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.amirbar.net/" target="_blank">Amir Bar<sup>2,*</sup></a>
+                </span>
+              </div>
+
+              <div class="authors-line" style="margin-top: 0.5rem;">
+                <span class="author-block">
+                  <a href="http://yann.lecun.com/" target="_blank">Yann LeCun<sup>2,&dagger;</sup></a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell<sup>1,&dagger;</sup></a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank">Jitendra Malik<sup>1,&dagger;</sup></a>
+                </span>
+              </div>
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
-                      <img src="static/images/BAIR_logo.png" alt="Berkeley logo" style="height: 3em; vertical-align: middle; margin-right: 0.3em;">
+                      <!-- <img src="static/images/BAIR_logo.png" alt="Berkeley logo" style="height: 3em; vertical-align: middle; margin-right: 0.3em;"> -->
                       <sup>1</sup>
                       UC Berkeley (BAIR), 
                     </span>
                     <span class="author-block">
-                      <img src="static/images/Meta_logo.png" alt="Berkeley logo" style="height: 2.4em; vertical-align: middle; margin-left: 0.4em; margin-right: 0.3em;">
+                      <!-- <img src="static/images/Meta_logo.png" alt="Berkeley logo" style="height: 2.7em; vertical-align: middle; margin-left: 0.4em; top: 0.2em; margin-right: 0.3em;"> -->
                       <sup>2</sup>
                       FAIR at Meta
                     </span>
@@ -94,26 +100,6 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
                   </span>
 
                   <!-- Github link -->
@@ -147,11 +133,10 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -160,7 +145,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 
@@ -425,10 +410,9 @@
     height: auto;
     margin-bottom: 1rem;
   }
-  
+
   .thumbnail-row {
     display: grid;
-    grid-template-rows: repeat(2, auto); /* 2 fixed rows */
     grid-auto-flow: column;
     gap: 10px;
     justify-content: center;
@@ -444,6 +428,27 @@
   }
   
   .thumbnail-row img.active {
+    border-color: #2270be;
+  }
+
+  .thumbnail-row-2 {
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* 2 fixed rows */
+    grid-auto-flow: column;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .thumbnail-row-2 img {
+    width: 100px;
+    border: 3px solid transparent;       /* Light gray border for all thumbnails */
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;       /* Ensure border doesn't affect layout */
+    transition: border-color 0.2s ease;
+  }
+  
+  .thumbnail-row-2 img.active {
     border-color: #2270be;
   }
 
@@ -470,7 +475,7 @@
     <img id="mainDisplay1" src="static/images/supp_long/id_19.png" class="main-image" alt="Main Display" />
 
     <!-- Thumbnails -->
-    <div class="thumbnail-row">
+    <div class="thumbnail-row-2">
       <div class="thumb-wrapper active">
         <img src="static/images/supp_long_thumb/id_19.png" data-full="static/images/supp_long/id_19.png" class="thumb active" alt="Thumb 107" onclick="changeImage(this, 'mainDisplay1')">
       </div>
@@ -547,17 +552,6 @@
   </div>
 </section>
 
-<!-- <script>
-  function changeImage(element) {
-    const fullImage = element.getAttribute('data-full');
-    if (fullImage) {
-      document.getElementById("mainDisplay").src = fullImage;
-    }
-
-    document.querySelectorAll('.thumb').forEach(el => el.classList.remove('active'));
-    element.classList.add('active');
-  }
-</script> -->
 
 <script>
   function changeImage(element, targetId) {
@@ -566,12 +560,15 @@
       main.src = element.dataset.full;
     }
 
-    // Remove active class from siblings within the same row
-    const wrappers = element.closest('.thumbnail-row').querySelectorAll('.thumb-wrapper');
-    wrappers.forEach(w => {
-      w.classList.remove('active');
-      w.querySelector('img').classList.remove('active');
-    });
+    // Remove active class from siblings within the same thumbnail row
+    const row = element.closest('.thumbnail-row, .thumbnail-row-2');
+    if (row) {
+      const wrappers = row.querySelectorAll('.thumb-wrapper');
+      wrappers.forEach(w => {
+        w.classList.remove('active');
+        w.querySelector('img').classList.remove('active');
+      });
+    }
 
     element.classList.add('active');
     element.parentElement.classList.add('active');
