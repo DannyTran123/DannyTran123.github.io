@@ -208,24 +208,6 @@
 </section>
 <!-- What do we want?-->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We train models to <b>P</b>redict <b>E</b>go-centric <b>V</b>ideo from human <b>A</b>ctions (PEVA), given the past video and an action represented by the relative 3D body pose. By conditioning on kinematic pose trajectories, structured by the joint hierarchy of the body, our model learns to simulate how physical human actions shape the environment from a first-person point of view. We train an auto-regressive conditional diffusion transformer on Nymeria, a large-scale dataset of real-world egocentric video and body pose capture. We further design a hierarchical evaluation protocol with increasingly challenging tasks, enabling a comprehensive analysis of the model's embodied prediction and control abilities. Our work represents an initial attempt to tackle the challenges of modeling complex real-world environments and embodied agent behaviors with video prediction from the perspective of a human.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
 <!-- What are the requirements? -->
 <section class="section">
   <div class="container is-max-desktop">
@@ -260,30 +242,51 @@
 <!-- Humans as Agents -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3" style="margin-bottom: 2rem;">Humans as Agents</h2>
+    <h2 class="title is-3" style="margin-bottom: 2rem;">
+      Humans as Agents
+    </h2>
+    <h2 class="subtitle has-text-centered" style="margin-bottom: 2rem;">
+      Humans are the most complex agent in the world
+    </h2>
 
-    <div class="box">
-      <h2 class="subtitle has-text-left" style="margin-bottom: 1.5rem;">
-        To create a <span class="gradient-text-reg">World Model for Embodied Agents</span>, we need...
-      </h2>
+    <!-- Ego-centric View to Intention -->
+    <div class="content" style="margin-bottom: 2rem;">
+      <h3 class="subtitle has-text-left"><strong>• Ego-centric view -> Intention</strong></h3>
+      <p class="subtitle has-text-left">
+        Humans routinely look first and act second—our eyes lock onto a goal, the brain runs a brief visual “simulation” of the outcome, and only then does the body move.
+      </p>
+      <p class="subtitle has-text-left">
+        At every moment, our egocentric view both serves as input from the environment and 
+        <span style="color: red; font-weight: bold;">reflects the intention/goal</span> behind the next movement.
+      </p>
+      <div class="has-text-centered" style="margin-top: 1rem;">
+        <img src="static/images/motivation.png" alt="Generated Sequence" style="max-width: 100%;" />
+      </div>
 
-      <h2 class="subtitle has-text-left" style="margin-bottom: 0.5rem;">
-        … a real embodied agent…: complex actions.
-      </h2>
-      <ul class="subtitle has-text-left" style="list-style: none; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-        <li>❌ abstract control signals — ⬆️，⬇️，⬅️，➡️</li>
-        <li>✅ real, physical grounded complex action space</li>
-      </ul>
-
-      <h2 class="subtitle has-text-left" style="margin-bottom: 0.5rem;">
-        … that act in the real world: complex scenarios.
-      </h2>
-      <ul class="subtitle has-text-left" style="list-style: none; padding-left: 1.5rem;">
-        <li>❌ Ascetic scene, stationary camera</li>
-        <li>✅ diverse real-life scenario, ego-centric view</li>
-      </ul>
     </div>
-  </div>
+
+    <!-- Whole-body Control to Physicality -->
+    <div class="content">
+      <h3 class="subtitle has-text-left"><strong>• Whole-body Control -> Physicality</strong></h3>
+      <div class="is-flex is-justify-content-center is-align-items-flex-start" style="gap: 2rem; margin-top: 1rem;">
+    
+        <div style="text-align: center; width: 170px;">
+          <img src="static/images/physicality_feet.png" alt="Feet action" style="height: 140px; object-fit: contain;" />
+          <p style="margin-top: 0.5rem;">Actions of the Feet</p>
+        </div>
+    
+        <div style="text-align: center; width: 170px;">
+          <img src="static/images/physicality_hand.png" alt="Hand action" style="height: 140px; object-fit: contain;" />
+          <p style="margin-top: 0.5rem;">Actions of the Hand</p>
+        </div>
+    
+        <div style="text-align: center; width: 170px;">
+          <img src="static/images/physicality_whole.png" alt="Whole-body action" style="height: 140px; object-fit: contain;" />
+          <p style="margin-top: 0.5rem;"><strong>Whole-body Control</strong></p>
+        </div>
+    
+      </div>
+    </div>
 </section>
 <!-- Humans as Agents -->
 
@@ -303,37 +306,26 @@
 <!-- What did we do?-->
 
 
-<!-- Motivation -->
-<section class="section">
+<!-- Paper abstract -->
+<section class="section hero is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Motivation: Visual System for Planning</h2>
-    <h2 class="subtitle has-text-left">
-      Humans routinely look first and act second—our eyes lock onto a goal, the brain runs a brief visual “simulation” of the outcome, and only then does the body move.
-    </h2>
-    <h2 class="subtitle has-text-left">
-      At every moment, our egocentric view both serves as input from the environment and <span style="color: red;">reflects the intention/goal</span> behind the next movement.
-    </h2>
-    <!-- <div class="hero-body"> -->
-    <img src="static/images/motivation.png" alt="MY ALT TEXT"/>
-    
-    <h2 class="title is-4">Challenges</h2>
-      <ul class="subtitle" style="list-style-type: disc; padding-left: 1.5rem;">
-        <li>Conditioning from actions to vision is nonlinear: Same movement leads to different views because humans act in complex, embodied, goal-directed environments.</li>
-        <li>Human Control Is High-Dimensional and Structured: Full-body motion spans 48+ DoF, with hierarchical, time-dependent dynamics—not synthetic control codes.</li>
-        <li>Egocentric View Reveals Intention—But Hides the Body: First-person vision reflects goals, but not motion execution—models must infer consequences from invisible physical actions.</li>
-        <li>Perception Lags Behind Action: Visual feedback often comes seconds later, requiring long-horizon prediction and temporal reasoning.</li>
-      </ul>
-    <h2 class="title is-4">Why it matters?</h2>
-      <ul class="subtitle" style="list-style-type: disc; padding-left: 1.5rem;">
-        <li>Vision as Goal: Humans act to see, thus egocentric prediction is internal goal simulation. </li>
-        <li>Action–Perception Coupling: The world we perceive depends on how we move our whole body. </li>
-        <li>Moving Beyond Synthetic Actions: Prior world models use abstract control signals while ours models real, physical human action. </li>
-        <li>Toward Embodied Intelligence: Physically grounded video models bring us closer to agents that plan, adapt, and interact like humans. </li>
-        <li>Intention Understanding Through Prediction: Predicting what an agent will see is a path to inferring what it wants </li>
-      </ul>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We train models to <b>P</b>redict <b>E</b>go-centric <b>V</b>ideo from human <b>A</b>ctions (PEVA), given the past video and an action represented by the relative 3D body pose. By conditioning on kinematic pose trajectories, structured by the joint hierarchy of the body, our model learns to simulate how physical human actions shape the environment from a first-person point of view. We train an auto-regressive conditional diffusion transformer on Nymeria, a large-scale dataset of real-world egocentric video and body pose capture. We further design a hierarchical evaluation protocol with increasingly challenging tasks, enabling a comprehensive analysis of the model's embodied prediction and control abilities. Our work represents an initial attempt to tackle the challenges of modeling complex real-world environments and embodied agent behaviors with video prediction from the perspective of a human.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+<!-- End paper abstract -->
+
+
+<!-- Motivation -->
+
 <!-- Motivation-->
 
 <!-- Following Atomic Actions-->
