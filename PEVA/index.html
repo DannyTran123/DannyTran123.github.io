@@ -545,7 +545,7 @@
 </section>
 
 
-<script>
+<!-- <script>
   function changeImage(element, targetId) {
     const main = document.getElementById(targetId);
     if (main && element.dataset.full) {
@@ -565,7 +565,45 @@
     element.classList.add('active');
     element.parentElement.classList.add('active');
   }
+</script> -->
+
+<script>
+  /**
+   * Swap the large image and (optionally) its caption.
+   *
+   * @param {HTMLElement} element   – the clicked <img> thumbnail
+   * @param {string}      targetId  – id of the big <img> to update
+   * @param {string=}     captionId – id of the caption element (omit if none)
+   */
+  function changeImage(element, targetId, captionId = null) {
+    const mainImg = document.getElementById(targetId);
+    if (mainImg && element.dataset.full) {
+      mainImg.src = element.dataset.full;
+    }
+
+    /* ---------- (optional) caption swap ---------- */
+    if (captionId) {
+      const captionEl = document.getElementById(captionId);
+      if (captionEl) {
+        // prefer data-caption, then fallback to alt text
+        captionEl.textContent = element.dataset.caption || element.alt || '';
+      }
+    }
+    /* --------------------------------------------- */
+
+    /* visual “active” toggle (unchanged) */
+    const row = element.closest('.thumbnail-row, .thumbnail-row-2');
+    if (row) {
+      row.querySelectorAll('.thumb-wrapper').forEach(w => {
+        w.classList.remove('active');
+        w.querySelector('img').classList.remove('active');
+      });
+    }
+    element.classList.add('active');
+    element.parentElement.classList.add('active');
+  }
 </script>
+
 
 
 <!-- Planning with Multiple Action Candidates-->
@@ -600,27 +638,46 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">More Attempts with Planning</h2>
     <div class="box">
+    <h2 class="subtitle has-text-left">
+      We formulate planning as an energy minimization problem and perform standalone planning in the same way as NWM (Bar et al., 2025) using the Cross-Entropy Method (CEM) (Rubinstein, 1997) besides minor modifications in the representation and initialization of the action. For simplicity, we conduct two experiments where we only predict moving either the left or right arm controlled by predicting the relative joint rotations represented as euler angles.
+    </h2>
     <img id="mainDisplay2" src="static/images/PEVA_CEM_viz/right_id_18.png" class="main-image" alt="Main Display" />
+
+    <p id="mainCaption2" class="subtitle has-text-centered" style="margin-top:0.5rem;">
+      In this case, we are able to predict a sequence of actions that raises our right arm to the mixing stick. We see a limitation with our method as we only predict the right arm so we do not predict to move the left arm down accordingly.
+    </p>
 
     <!-- Thumbnails -->
     <div class="thumbnail-row">
       <div class="thumb-wrapper active">
-        <img src="static/images/PEVA_CEM_viz/right_id_18_thumb.png" data-full="static/images/PEVA_CEM_viz/right_id_18.png" class="thumb active" alt="Thumb 107" onclick="changeImage(this, 'mainDisplay2')">
+        <img src="static/images/PEVA_CEM_viz/right_id_18_thumb.png" data-full="static/images/PEVA_CEM_viz/right_id_18.png" 
+        data-caption="In this case, we are able to predict a sequence of actions that raises our right arm to the mixing stick. We see a limitation with our method as we only predict the right arm so we do not predict to move the left arm down accordingly."
+        class="thumb active" alt="Thumb 107" onclick="changeImage(this, 'mainDisplay2', 'mainCaption2')">
       </div>
       <div class="thumb-wrapper active">
-        <img src="static/images/PEVA_CEM_viz/right_id_36_thumb.png" data-full="static/images/PEVA_CEM_viz/right_id_36.png" class="thumb" alt="Thumb 104" onclick="changeImage(this, 'mainDisplay2')">
+        <img src="static/images/PEVA_CEM_viz/right_id_36_thumb.png" data-full="static/images/PEVA_CEM_viz/right_id_36.png" 
+        data-caption="In this case, we are able to predict a sequence of actions that moves our right arm toward the left but not quite enough. We see a limitation with our method as we only predict the right arm so we do not predict any necessary additional body rotations."
+        class="thumb" alt="Thumb 104" onclick="changeImage(this, 'mainDisplay2', 'mainCaption2')">
       </div>
       <div class="thumb-wrapper active">
-        <img src="static/images/PEVA_CEM_viz/right_kettle_thumb.png" data-full="static/images/PEVA_CEM_viz/right_kettle.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2')">
+        <img src="static/images/PEVA_CEM_viz/right_kettle_thumb.png" data-full="static/images/PEVA_CEM_viz/right_kettle.png" 
+        data-caption="In this case, we are able to predict a sequence of actions that reaches toward the kettle but does not quite grab it as in the goal."
+        class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2', 'mainCaption2')">
       </div>
       <div class="thumb-wrapper active">
-        <img src="static/images/PEVA_CEM_viz/left_id_4_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_4.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2')">
+        <img src="static/images/PEVA_CEM_viz/left_id_4_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_4.png" 
+        data-caption="In this case, we are able to predict a sequence of actions that pulls our left arm in, similar to the goal."
+        class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2', 'mainCaption2')">
       </div>
       <div class="thumb-wrapper active">
-        <img src="static/images/PEVA_CEM_viz/left_id_10_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_10.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2')">
+        <img src="static/images/PEVA_CEM_viz/left_id_10_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_10.png" 
+        data-caption="n this case, we are able to predict a sequence of actions that lowers our left arm, but not the same amount as the groundtruth sequence as we can see in the pose and hand at the bottom of our rollout."
+        class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2', 'mainCaption2')">
       </div>
       <div class="thumb-wrapper active">
-        <img src="static/images/PEVA_CEM_viz/left_id_15_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_15.png" class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2')">
+        <img src="static/images/PEVA_CEM_viz/left_id_15_thumb.png" data-full="static/images/PEVA_CEM_viz/left_id_15.png" 
+        data-caption="In this case, we are able to predict a sequence of actions that lowers our left arm that lowers the tissue. However, the goal image still has the tissue visible."
+        class="thumb" alt="Thumb 94" onclick="changeImage(this, 'mainDisplay2', 'mainCaption2')">
       </div>
     </div>
   </div>
